@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hotel Reservations App">
+    <meta name="keyword" content="Hotel, Bookings, Reservations, Reviews, Charlotte, North Carolina">
+    <link rel="stylesheet" type="text/css" href="css/index.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <title>book-it | Hotel Reservations</title> 
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <div class="menu-wrap">
+                <input type="checkbox" class="toggler">
+                <div class="hamburger"><div></div></div>
+                <div class="menu">
+                  <div>
+                    <div>
+                      <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h1 class="logo"><a href="index.html">book-it</a></h1>
+            <span>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            </span>
+        </nav> 
+        <div id="showcase">
+            <div class="container">
+                <div class="container-content">
+                    <h1><span class="first-word">ENJOY</span> YOUR STAY</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, nostrum.</p>
+                    <a class="btn3" href="about.html">About Us</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section id="home-info" class="bg-dark">
+        <div class="info-image"></div>
+        <div class="info-content">
+            <h2><span class="first-word">History</span> of Our Company</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt sit molestias facere nobis sunt velit, fugit fuga sequi est nemo quisquam, adipisci consectetur, vel amet. Provident voluptatem odio illum perspiciatis.</p>
+            <a class="btn2" href="about.html">Read More</a>
+        </div>
+        
+    </section>
+    <section id="features">
+        <div class="box light">
+            <i class="fas fa-hotel fa-3x"></i>
+            <h3>Great Locations</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, explicabo?</p>
+        </div>
+        <div class="box primary">
+            <i class="fas fa-utensils fa-3x"></i>
+            <h3>Free Meals</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, explicabo?</p>
+        </div>
+        <div class="box light">
+            <i class="fas fa-dumbbell fa-3x"></i>
+            <h3>Active Center</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, explicabo?</p>
+        </div>
+    </section>
+
+    <section class="chatbox">
+        <h2 class="hide">Ask Us a Question</h2>
+        <button class="open-button" onclick="openform()">Live Chat</button>
+        <div class="chat-popup" id="my-form">
+            <form class="form-container">
+                <h1>Chat</h1>
+                <label for="msg">Message</label>
+                <textarea placeholder="Enter Message Here ..." name="msg" required></textarea>
+                <button type="submit" class="enter-btn">Send</button>
+                <button type="button" class="cancel-btn" onclick="closeform()">Cancel</button>
+            </form>
+        </div>
+    </section>
+
+    <footer id="main-footer">
+        <p>book-it &copy; 2020 &nbsp;|&nbsp; All Rights Reserved &nbsp;|&nbsp; Ben Flanders</p>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>

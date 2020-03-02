@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hotel Reservations App">
+    <meta name="keyword" content="Hotel, Bookings, Reservations, Reviews, Charlotte, North Carolina">
+    <link rel="stylesheet" type="text/css" href="css/contact.css"> 
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <title>book-it | Hotel Reservations</title> 
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <div class="menu-wrap">
+                <input type="checkbox" class="toggler">
+                <div class="hamburger"><div></div></div>
+                <div class="menu">
+                  <div>
+                    <div>
+                      <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h1 class="logo"><a href="index.html">book-it</a></h1>
+            <span>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            </span>
+        </nav> 
+
+        <div class="back">
+            <div class="container">
+                <div class="container-content">
+                    <h1><span class="first-word">CONTACT</span> US</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim facere quia sint, cumque consectetur consequuntur iste beatae quas commodi quis accusantium qui architecto reprehenderit ipsum atque at natus labore! Doloremque natus ad numquam necessitatibus, quis recusandae quibusdam excepturi. Ipsum, ab!</p>
+                    <div class="panels">
+                        <div class="panel">
+                            <div class="panel-img">
+                                <i class="fas fa-question-circle"></i>
+                            </div>
+                            <div class="panel-body">
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos sed voluptas non assumenda dolorum perspiciatis. Quis reprehenderit impedit explicabo atque voluptatem ad rerum quas sint. Maxime dolorem amet molestiae non.</p>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div class="panel-img">
+                                <i class="fas fa-clipboard-list"></i>
+                            </div>
+                            <div class="panel-body">
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos sed voluptas non assumenda dolorum perspiciatis. Quis reprehenderit impedit explicabo atque voluptatem ad rerum quas sint. Maxime dolorem amet molestiae non.</p>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div class="panel-img">
+                                <i class="fas fa-people-carry"></i>
+                            </div>
+                            <div class="panel-body">
+                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos sed voluptas non assumenda dolorum perspiciatis. Quis reprehenderit impedit explicabo atque voluptatem ad rerum quas sint. Maxime dolorem amet molestiae non.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact">
+                        <form class="contact-form">
+                            <label for="name"></label>
+                            <input type="text" id="name" class="contact-form-text" placeholder="Your name">
+                            <label for="email"></label>
+                            <input type="email" id="email" class="contact-form-text" placeholder="Your email">
+                            <label for="phone"></label>
+                            <input type="tel" id="phone" class="contact-form-text" placeholder="Your phone">
+                            <label for="comment"></label>
+                            <textarea class="contact-form-text" id="comment" placeholder="Your message"></textarea>
+                            <div class="info"><i class="fas fa-phone"></i> &nbsp; 1.844.555.5555</div>
+                            <div class="info bottom"><i class="fas fa-envelope"></i> &nbsp; info@aussieadventures.com</div>
+                            <label for="enter"></label>
+                            <button id="enter" class="contact-form-btn">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </header>
+
+
+    <section class="chatbox">
+        <button class="open-button" onclick="openform()">Live Chat</button>
+        <div class="chat-popup" id="my-form">
+            <form class="form-container">
+                <h1>Chat</h1>
+                <label for="msg">Message</label>
+                <textarea placeholder="Enter Message Here ..." name="msg" required></textarea>
+                <button type="submit" class="enter-btn">Send</button>
+                <button type="button" class="cancel-btn" onclick="closeform()">Cancel</button>
+            </form>
+        </div>
+    </section>
+    
+
+
+
+    <footer id="main-footer">
+        <p>book-it &copy; 2020 &nbsp;|&nbsp; All Rights Reserved &nbsp;|&nbsp; Ben Flanders</p>
+    </footer>
+
+    <script src="index.js"></script>
+</body> 
+</html>

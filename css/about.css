@@ -1,0 +1,598 @@
+:root{
+    --primary-color: rgba(13, 110, 139, 0.75);
+    --overlay-color: rgba(24, 39, 51, 0.85); 
+    --menu-speed: 0.75s; 
+  }
+
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+
+*{
+    margin:0; 
+    padding:0; 
+    box-sizing: border-box;
+}
+
+html, body{
+    font-family: 'roboto', sans-serif; 
+    line-height: 1.7em; 
+    font-size: 16px; 
+}
+
+#navbar{ 
+    background: #242424; 
+    overflow: auto; 
+    color:white;
+    position:relative;
+} 
+
+#navbar span{
+    margin-left: 10px;
+}
+
+#navbar .fab{ 
+    font-size: 20px; 
+    padding:14px;
+    margin-top: 7px;
+}
+
+#navbar > span{
+    margin-left: 80px;
+}
+
+#navbar li.current{
+    background-color: gray;
+}
+
+#navbar a{
+    color: #fff; 
+    text-decoration: none;   
+} 
+
+#navbar li:hover, 
+#navbar li:active{
+    background: #adadad;   
+}
+
+#navbar h1{
+    float:right; 
+    padding:17px;
+    font-family: Helvetica;
+    font-size: 35px;
+    overflow:hidden;
+}
+
+#navbar ul{
+    float:right; 
+} 
+
+#navbar li{
+    display:block;
+    padding:10px;
+}
+
+#showcase{
+    background: url('../img/test-bg.jpg') no-repeat center center/cover;
+    height:400px;
+}
+
+.container{
+    text-align: center;
+    width:100%;
+    height:400px;   
+    margin:auto;
+    position:relative;
+}
+
+.container-content{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    padding:20px;
+}
+
+.container h1{
+    color:white;
+    padding:10px;
+    font-family: helvetica;
+} 
+
+.first-word{
+    color:#faaa68;   
+}
+
+.container p{
+    color:white;
+    padding:10px 0px 35px 0px;
+}
+
+.container .btn{
+    text-decoration: none;
+    color: white;
+    background: gray;
+    border: 2px black solid;
+    padding:10px 20px;
+    border-radius: 25px;
+}
+
+.container-content .btn:hover, 
+.container-content .btn:active{
+    background: #adadad;
+    cursor: pointer;
+} 
+
+.bg-dark{
+    background: #242424;
+    color:white;
+}
+
+.btn2{
+    text-decoration: none;
+    color: #242424;
+    background: white;
+    padding:10px 20px;
+}
+
+.btn3{
+    text-decoration: none;
+    color: white;
+    background: #242424;
+    padding:10px 20px;
+}
+
+#home-info {
+    height: 400px; 
+    position: relative;
+} 
+
+#home-info .info-image{
+    float: left; 
+    width:50%; 
+    background: url('../img/person-1.jpg') no-repeat center center/cover;
+    min-height: 100%; 
+}
+
+#home-info .info-image2{
+    float: right; 
+    width:50%; 
+    background: url('../img/person-2.jpg') no-repeat center center/cover;
+    min-height: 100%; 
+}
+
+#home-info .info-image3{
+    float: right; 
+    width:50%; 
+    background: url('../img/person-3.jpg') no-repeat center center/cover;
+    min-height: 100%; 
+}
+
+#home-info .info-content{
+    float:right; 
+    width:50%; 
+    height:100%; 
+    padding:20px; 
+    overflow:hidden;
+}
+
+#home-info .info-content2{
+    float:left; 
+    width:50%; 
+    height:100%; 
+    padding:20px; 
+    overflow:hidden;
+}
+
+#home-info .info-content h2{
+    padding-bottom: 30px;
+}
+
+#home-info .info-content p{
+    padding-bottom: 25px;
+}
+
+#home-info .info-content a{
+    padding:10px;
+}
+
+#home-info .info-content2 h2{
+    padding-bottom: 30px;
+}
+
+#home-info .info-content2 p{
+    padding-bottom: 25px;
+}
+
+#home-info .info-content2 a{
+    padding:10px;
+}
+
+
+#features{
+    width:100%;
+    display:flex;   
+    align-content: center;
+}
+
+.box{
+    text-align: center;
+    width:100%; 
+    padding:20px;
+}  
+
+.light{
+    background: #ccc;
+} 
+
+.primary{
+    background: #faaa68; 
+    color:white;
+}
+
+
+#main-footer{
+    width:100%; 
+    background: #242424; 
+    color:white; 
+    text-align: center;
+    padding:15px;
+}
+
+
+.menu-wrap{
+    position: absolute; 
+    top:0; 
+    left:0;
+    z-index: 1; 
+  }
+  
+  .menu-wrap .toggler{
+    position:absolute; 
+    top:0;
+    left:0;
+    z-index: 2; 
+    curser: pointer;
+    width:50px; 
+    height:50px;
+    opacity: 0;
+  }
+  
+  .menu-wrap .hamburger{
+    position: absolute; 
+    top:0;
+    left:0; 
+    z-index:1;
+    width: 61px; 
+    height: 61px; 
+    padding:1rem;
+    background: #faaa68;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+  } 
+  
+  /* hamburger lines */ 
+  
+  .menu-wrap .hamburger > div{
+    position:relative; 
+    width:100%; 
+    height:2px; 
+    background:white; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    transition: all 0.4s ease;
+  }
+  
+  /* styling for top and bottom lines */
+  .menu-wrap .hamburger > div:before,
+  .menu-wrap .hamburger > div:after{
+    content:"";
+    position:absolute; 
+    z-index:1; 
+    top: -10px; 
+    width:100%; 
+    height:2px; 
+    background: inherit;
+  }
+  
+  /* moves line down */
+  .menu-wrap .hamburger > div:after{
+    top: 10px;
+  }
+  
+  /* Toggler animate */ 
+  .menu-wrap .toggler:checked + .hamburger > div{
+    transform: rotate(135deg);
+  }
+  
+  /* turn lines into x */
+  .menu-wrap .toggler:checked + .hamburger > div:before, 
+  .menu-wrap .toggler:checked + .hamburger > div:after{
+    top:0;
+    transform: rotate(90deg);
+  }
+  
+  /* rotate on hover when checked */ 
+  .menu-wrap .toggler:checked:hover + .hamburger > div{
+    transform: rotate(225deg);
+  } 
+  
+  /* Show menu */
+  .menu-wrap .toggler:checked ~ .menu{
+    visibility: visible;
+  }
+  
+  .menu-wrap .toggler:checked ~ .menu > div{
+    transform: scale(1);
+    transition-duration: var(--menu-speed);
+  }
+  
+  .menu-wrap .toggler:checked ~ .menu > div > div{
+    opacity: 1; 
+    transition: opacity 0.4s ease;
+  }
+  
+  .menu-wrap .menu{
+    position:fixed; 
+    top:0;
+    left:0;
+    width:100%; 
+    height:100%; 
+    visibility: hidden; 
+    overflow: hidden; 
+    display:flex; 
+    align-items:center; 
+    justify-content:center; 
+  }
+  
+  .menu-wrap .menu > div{
+    background: var(--overlay-color); 
+    border-radius: 50%;
+    width:200vw;
+    height:200vw;
+    display:flex; 
+    flex:none;
+    align-items: center; 
+    justify-content:center; 
+    transform: scale(0);
+    transition: all 0.4s ease; 
+  } 
+  
+  .menu-wrap .menu > div > div{
+    text-align: center; 
+    max-width:90vw; 
+    max-height:100vh; 
+    opacity: 0; 
+    transition: opacity 0.4s ease; 
+  } 
+  
+  .menu-wrap .menu > div > div > ul > li{
+    list-style: none; 
+    color: white; 
+    font-size:1.5rem; 
+    padding:1rem; 
+  }
+  
+  .menu-wrap .menu > div > div > ul > li > a{
+    color:inherit; 
+    text-decoration: none; 
+    transition: color 0.4s ease;
+  }
+
+.rating-box{
+    position:relative;
+    width:100%;
+    height:400px;
+    padding:20px;
+}
+
+.rating-box h2{
+    text-align:center;
+}
+
+.rating-box p{
+    padding:20px;
+    text-align:center;
+}
+
+  .rating{
+      position:absolute;
+      top:42%;
+      left:50%;
+      transform: translate(-50%, -50%) rotateY(180deg);
+      display:flex;
+  }
+
+  .rating input{
+      display: none; 
+  }
+
+  .rating label{
+      display:block;
+      width: 50px;
+      cursor:pointer; 
+      
+  }
+
+  .rating label:before{
+      content: '\f005';
+      font-family: fontAwesome;
+      position: relative;
+      display: block;
+      font-size: 50px;
+      color:#242424;
+  }
+
+  .rating label:after{
+    content: '\f005';
+    font-family: fontAwesome;
+    position: absolute;
+    display: block;
+    font-size: 50px;
+    color:#faaa68;
+    top:0;
+    opacity:0;
+    transition: 0.5s;
+    text-shadow: 0 2px 5px rgba(0,0,0,.5);
+}
+
+.rating label:hover:after,
+.rating label:hover ~ label:after,
+.rating input:checked ~ label:after{
+    opacity: 1;
+}
+
+#comment{
+    width:80%; 
+    height:100px;
+    justify-content: center;
+    position:absolute; 
+    left:50%; 
+    transform: translateX(-50%);
+    top: 225px;
+} 
+
+#submit{ 
+    position:absolute; 
+    left:50%; 
+    transform: translateX(-50%);
+    top: 345px;
+    background-color: #242424;
+    border:none;
+    color:white;
+    padding:10px 20px;
+    font-size: 16px;
+} 
+
+#submit:hover{
+    cursor:pointer;
+    background: #faaa68; 
+    color: #242424;
+}
+
+.chatbox {
+    position: relative;
+  }
+  
+  .chatbox h2{
+      position: absolute;
+      left:50%;
+      top:25%;
+      transform: translateX(-50%);
+  
+    }
+  
+    .open-button{
+      position:fixed;
+      background-color:#faaa68;
+      bottom:0;
+      right:0;
+      border: none;
+      color:white;
+      padding: 15px;
+      font-size: 23px;
+    }
+  
+    .chat-popup{
+      display:none;
+      position:fixed;
+      bottom:0px;
+      right:0;
+      border: 3px solid #b9b9b9;
+    }
+    
+    .form-container{
+      max-width: 300px;
+      padding: 10px; 
+      background-color:white;
+    }
+  
+    .form-container textarea{
+      width:100%;
+      padding:15px;
+      margin: 5px 0 22px 0;
+      border:none;
+      background: #f1f1f1;
+      min-height:200px;
+    }
+  
+    .form-container .enter-btn{
+      background-color: #faaa68;
+      color:white;
+      padding:16px 22px;
+      border:none; 
+      cursor:pointer;
+      width: 100%; 
+      margin-bottom:10px;
+      font-size: 20px;
+    }
+  
+    .form-container .cancel-btn{
+      background-color: #242424;
+      color:white;
+      padding:16px 22px;
+      border:none; 
+      cursor:pointer;
+      width: 100%; 
+      margin-bottom:10px;
+      font-size: 20px;
+    }
+  
+    .hide{
+      opacity: 0;
+    }
+
+/*.FAQ{
+  padding:30px;
+}
+
+.FAQ h2{
+  text-align:center;
+  padding-bottom:30px;
+}
+
+    /* Style the buttons that are used to open and close the accordion panel 
+		.accordion {
+      background-color: #faaa68;
+      color: #FFF;
+      cursor: pointer;
+      padding: 18px;
+      width: 100%;
+      text-align: center;
+      border: 1px solid white;
+      outline: none;
+      transition: 0.4s;
+      font: 20px Lato, sans-serif;
+  }
+
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) 
+  .active, .accordion:hover {
+      background-color: #f38328;
+  }
+
+  /* Style the accordion panel. Note: hidden by default 
+  .panel {
+      padding: 0 18px;
+      background-color: white;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+  }
+
+  p{
+    font: 16px Lato, sans-serif; 
+    padding:10px;
+  }
+
+  .accordion:after {
+      content: '\02795'; /* Unicode character for "plus" sign (+) 
+      font-size: 13px;
+      float: right;
+      margin-left: 5px;
+  }
+
+  .active:after {
+      content: "\2796"; /* Unicode character for "minus" sign (-) */ 
+  }
